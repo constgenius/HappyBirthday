@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+
+    </div>
+
+
+    <script>
+        for (let i = 1; i < 300; i++) {
+            let box = document.createElement("div");
+            box.classList.add("box");
+            box.style.filter = `hue-rotate(${i * 10}deg)`
+            document.querySelector(".main").appendChild(box);
+
+
+        }
+
+        function animateBox() {
+            let boxes = document.querySelectorAll(".box");
+            let num = Math.floor(Math.random() * boxes.length);
+            boxes[num].classList.toggle("animate");
+        }
+
+        setInterval(animateBox, 1000);
+
+
+
+    </script>
+</body>
+
+</html>

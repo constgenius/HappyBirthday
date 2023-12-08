@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main {
+    position: relative;
+    background: #111;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 0 10px;
+}
+
+.box {
+    position: relative;
+    font-size: 1.33em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.box:nth-child(odd)::before {
+    content: "• Happy Birthday •"
+}
+
+.box:nth-child(even)::before {
+    content: "Keep Smiling";
+    filter: hue-rotate(180deg);
+}
+
+.box.animate {
+    color: rgb(0, 221, 255);
+
+}
